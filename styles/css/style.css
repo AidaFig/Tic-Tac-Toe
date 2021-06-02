@@ -1,0 +1,21 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tabuleiro {
+  width: 625px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: gold;
+}
+.tabuleiro .casas {
+  width: 200px;
+  height: 200px;
+  border: 4px solid black;
+}
+
+/*# sourceMappingURL=style.css.map */
