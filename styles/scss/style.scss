@@ -4,7 +4,7 @@ body, html {
     padding: 0;
     box-sizing: border-box;
 }
-.tabuleiro {
+.board {
     width: 625px;
     margin: auto;
     display: flex;
@@ -12,9 +12,16 @@ body, html {
     background-color:gold;
 
     .casas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width:200px;
         height: 200px;
         border: 4px solid black;
         
+        img {
+            width: 80%;
+            height: 80%;
+        }
     } 
 }

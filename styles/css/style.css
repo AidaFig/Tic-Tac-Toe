@@ -5,17 +5,24 @@ body, html {
   box-sizing: border-box;
 }
 
-.tabuleiro {
+.board {
   width: 625px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   background-color: gold;
 }
-.tabuleiro .casas {
+.board .casas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 200px;
   height: 200px;
   border: 4px solid black;
+}
+.board .casas img {
+  width: 80%;
+  height: 80%;
 }
 
 /*# sourceMappingURL=style.css.map */
