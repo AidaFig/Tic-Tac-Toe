@@ -2,11 +2,26 @@
 const board = document.querySelector(".board")
 const casas = document.getElementsByClassName("casas")
 
-// function playerTurn() {
-//     const player1 = document.createElement("img");
-    
-    
-// }
+const player1 = "X"
+const player2 = "O"
+var playerTime = player2
+var gameOver = false;
+
+playersTurn()
+
+function playersTurn() {
+    if (gameOver) {
+        return
+    }
+    if (playerTime === player2) {
+        
+    var player = document.querySelectorAll("div.turn img")[0]
+    player.setAttribute("src", "./assets/img/cancel.png");
+    }else {
+        var player = document.querySelectorAll("div.turn img")[0]
+        player.setAttribute("src", "./assets/img/o.png")
+    }
+}
 
 
 let jogadas = 0
@@ -20,12 +35,18 @@ for(var casa of casas){
         // console.log(elementoSelecionado)
         
         const img = document.createElement("img")
+        if (gameOver) {
+            return
+        }
         if(jogadas % 2 === 0) { //true = par
             img.setAttribute("src", "./assets/img/o.png")
             img.setAttribute("class", "par")
+            playersTurn(playerTime = player2)
+            
         } else { //false = impar
             img.setAttribute("src", "./assets/img/cancel.png")
             img.setAttribute("class", "impar")
+            playersTurn(playerTime = player1)
         }
         elementoSelecionado.appendChild(img)
         console.log(elementoSelecionado.childElementCount)
@@ -35,9 +56,9 @@ for(var casa of casas){
     })
 }
 
-function verificarVencedor(e, casa) {
-    if (jogadas > 3) {
-        console.log(casa)
+function verificarVencedor(casa) {
+    if (jogadas === 9) {
+        
         console.log(e)
     }
 }
